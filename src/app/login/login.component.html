@@ -1,0 +1,14 @@
+<h2 *ngIf='credentials.user'> {{credentials.user}}</h2>
+
+<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="user">
+    User:
+    <input type="text" class="formInput" name="user" formControlName="user" required>
+  </label>
+  
+  <label for="password">
+    Password:
+    <input type="password" class="formInput" name="password" formControlName="password" required>
+  </label>
+  <button type="submit" class="button">Submit</button>
+</form>
